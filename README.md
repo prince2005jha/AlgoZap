@@ -41,6 +41,32 @@ It allows users to create, execute, and verify automated workflows (“Zaps”) 
 ---
 
 ## ⚙️ Folder Structure
+AlgoZap/
+│
+├── index.js # Entry point
+├── config/
+│ └── db.js # MongoDB connection
+├── routes/
+│ └── authRoutes.js # Authentication routes
+├── controllers/
+│ └── authController.js # Register/Login logic
+├── models/
+│ └── User.js # User schema
+├── middleware/
+│ └── authMiddleware.js # JWT verification
+├── .env # Environment variables
+├── package.json
+└── README.md
+
+
+---
+
+## ⚡ Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/AlgoZap.git
+cd AlgoZap
 
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1394ffa8-0b1a-468c-9311-60f57efa125a" />
