@@ -67,6 +67,19 @@ AlgoZap/
 ```bash
 git clone https://github.com/your-username/AlgoZap.git
 cd AlgoZap
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Configure environment variables
+
+Create a .env file in the project root:
+
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/algozap
+JWT_SECRET=supersecretkey123
+
+4️⃣ Start MongoDB (local)
+"C:\Program Files\MongoDB\Server\8.2\bin\mongod.exe"
 
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1394ffa8-0b1a-468c-9311-60f57efa125a" />
