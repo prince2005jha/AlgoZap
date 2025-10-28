@@ -82,8 +82,43 @@ JWT_SECRET=supersecretkey123
 Start MongoDB (local)
 "C:\Program Files\MongoDB\Server\8.2\bin\mongod.exe"
 
-4️⃣ Start MongoDB (local)
-"C:\Program Files\MongoDB\Server\8.2\bin\mongod.exe"
+🧪 API Testing (via Postman)
+Register User
 
+POST http://localhost:5000/api/auth/register
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1394ffa8-0b1a-468c-9311-60f57efa125a" />
+Body → raw → JSON
+
+{
+  "name": "Prince",
+  "email": "prince@test.com",
+  "password": "123456"
+}
+
+Login User
+
+POST http://localhost:5000/api/auth/login
+
+Body → raw → JSON
+
+{
+  "email": "prince@test.com",
+  "password": "123456"
+}
+
+🛠️ Development Scripts
+Command	Description
+npm start	Run server (production)
+npm run dev	Run server with Nodemon
+npm install	Install dependencies
+🌐 Future Modules
+
+Drag-and-drop Workflow Builder UI
+
+Execution Engine with retry logic
+
+Team collaboration & billing dashboard
+
+On-chain payment & verification
+
+Multilingual UI support
