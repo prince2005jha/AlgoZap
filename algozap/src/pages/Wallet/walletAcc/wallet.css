@@ -1,0 +1,306 @@
+/* General Layout */
+.wallet-container {
+  min-height: 100vh;
+  background-color: #111827;
+  color: white;
+  display: flex;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar */
+.wallet-sidebar {
+  width: 16rem;
+  background: #000;
+  border-right: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.wallet-logo-section {
+  padding: 1.5rem;
+  border-bottom: 1px solid #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wallet-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: linear-gradient(135deg, #9333ea, #3b82f6);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallet-logo-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Navigation */
+.wallet-nav {
+  flex: 1;
+  padding: 1rem;
+}
+
+.wallet-nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.wallet-nav-btn:hover {
+  background: #1f2937;
+}
+
+.wallet-nav-btn.active {
+  background: #9333ea;
+}
+
+/* Footer */
+.wallet-footer {
+  padding: 1rem;
+  border-top: 1px solid #1f2937;
+}
+
+.wallet-footer-btn {
+  width: 100%;
+  text-align: left;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  background: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.wallet-footer-btn:hover {
+  background: #1f2937;
+}
+
+.wallet-footer-social {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.5rem 1rem;
+}
+
+.social-icon {
+  color: #6b7280;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icon.twitter:hover {
+  color: #38bdf8;
+}
+
+.social-icon.link:hover {
+  color: #d1d5db;
+}
+
+/* Main */
+.wallet-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.wallet-header {
+  background: #000;
+  border-bottom: 1px solid #1f2937;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wallet-market {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wallet-market .symbol {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+.wallet-market .price {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.wallet-market .change {
+  font-size: 0.875rem;
+  color: #10b981;
+}
+
+/* Buttons */
+.wallet-btn {
+  background: #9333ea;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.wallet-btn:hover {
+  background: #7e22ce;
+}
+
+.wallet-btn.gray {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.wallet-btn.gray:hover {
+  background: #4b5563;
+}
+
+.wallet-btn.full {
+  width: 100%;
+  font-size: 1.125rem;
+  padding: 1rem;
+}
+
+/* Welcome Section */
+.wallet-welcome {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.wallet-content {
+  max-width: 80rem;
+  width: 100%;
+}
+
+.wallet-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.wallet-intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.wallet-intro p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+}
+
+/* Grid */
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Cards */
+.wallet-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: border 0.3s;
+}
+
+.wallet-card:hover {
+  border-color: #9333ea;
+}
+
+.wallet-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Progress bars */
+.wallet-progress {
+  background: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-icon {
+  width: 3rem;
+  height: 3rem;
+  background: #9333ea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.progress-line {
+  flex: 1;
+  height: 0.5rem;
+  background: #374151;
+  border-radius: 1rem;
+}
+
+.progress-bars {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bars div {
+  flex: 1;
+  height: 0.5rem;
+  background: #374151;
+  border-radius: 0.25rem;
+}
+
+/* Import Grid */
+.wallet-import .import-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.wallet-import .import-row.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wallet-import .import-row div {
+  height: 3rem;
+  background: #374151;
+  border-radius: 0.5rem;
+}
