@@ -8,7 +8,7 @@ const homescreen: React.FC = () => {
       <nav>
         <div className="logo">
           <div className="logo-icon"></div>
-          <span>AutoConnect</span>
+          <span>AlgoZap</span>
         </div>
         <ul className="nav-links">
           <li><a href="#products">Products</a></li>
@@ -42,7 +42,7 @@ const homescreen: React.FC = () => {
 
       {/* How It Works */}
       <section className="how-it-works" id="how-it-works">
-        <h2>How AutoConnect works</h2>
+        <h2>How AlgoZap works</h2>
         <div className="features">
           <div className="feature">
             <div className="feature-icon">🔗</div>
@@ -57,7 +57,7 @@ const homescreen: React.FC = () => {
           <div className="feature">
             <div className="feature-icon">💼</div>
             <h3>Get more done</h3>
-            <p>AutoConnect automates your tasks so you can focus on your most important work.</p>
+            <p>AlgoZap automates your tasks so you can focus on your most important work.</p>
           </div>
         </div>
       </section>
@@ -130,7 +130,7 @@ const homescreen: React.FC = () => {
           <a href="#terms">Terms of Service</a>
           <a href="#privacy">Privacy Policy</a>
         </div>
-        <p className="copyright">© 2024 AutoConnect. All rights reserved.</p>
+        <p className="copyright">© 2024 AlgoZap. All rights reserved.</p>
       </footer>
     </>
   );
