@@ -2,6 +2,7 @@ import Navbar from '../components/common/Navbar'
 import Hero from '../components/sections/Hero'
 import Features from '../components/sections/Features'
 import HowItWorks from '../components/sections/HowItWorks'
+import LearnAutomation from '../components/sections/LearnAutomation'
 import BlockchainVisualizer from '../components/sections/BlockchainVisualizer'
 import Integrations from '../components/sections/Integrations'
 import Testimonials from '../components/sections/Testimonials'
@@ -17,6 +18,7 @@ export default function HomePage() {
                 <Hero />
                 <Features />
                 <HowItWorks />
+                <LearnAutomation />
                 <BlockchainVisualizer />
                 <Integrations />
                 <Testimonials />

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import Navbar from '../components/common/Navbar'
 import {
     Zap,
     Mail,
@@ -47,6 +48,7 @@ export default function SignupPage() {
 
     return (
         <div className="auth-page grid-pattern">
+            <Navbar />
             {/* Background Orbs */}
             <div className="auth-page__bg">
                 <div className="auth-page__orb auth-page__orb--1" />

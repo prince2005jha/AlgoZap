@@ -5,10 +5,10 @@ import { Link, useLocation } from 'react-router-dom'
 import './Navbar.css'
 
 const navLinks = [
-    { label: 'Features', href: '#features' },
-    { label: 'How It Works', href: '#how-it-works' },
-    { label: 'Integrations', href: '#integrations' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Features', href: '/#features', type: 'section' },
+    { label: 'How It Works', href: '/how-it-works', type: 'page' },
+    { label: 'Integrations', href: '/#integrations', type: 'section' },
+    { label: 'Pricing', href: '/pricing', type: 'page' },
 ]
 
 export default function Navbar() {
@@ -16,6 +16,7 @@ export default function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false)
     const location = useLocation()
     const isHome = location.pathname === '/'
+    const isBuilder = location.pathname.startsWith('/builder')
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 20)
@@ -23,21 +24,30 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
-    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (isBuilder) return null
+
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, type: string) => {
         setMobileOpen(false)
-        if (isHome) {
-            e.preventDefault()
-            const element = document.querySelector(href)
-            if (element) {
-                const navHeight = 80
-                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-                window.scrollTo({
-                    top: elementPosition - navHeight,
-                    behavior: 'smooth'
-                })
+
+        if (type === 'section') {
+            // Extract hash from href (e.g., "/#features" -> "#features")
+            const hash = href.substring(href.indexOf('#'))
+
+            if (isHome) {
+                e.preventDefault()
+                const element = document.querySelector(hash)
+                if (element) {
+                    const navHeight = 80
+                    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+                    window.scrollTo({
+                        top: elementPosition - navHeight,
+                        behavior: 'smooth'
+                    })
+                }
             }
+            // If not home, normal navigation to /#hash works via Link
         }
-        // If not home, let Link handle navigation to /#section
+        // Pages (type === 'page') follow normal Link behavior
     }
 
     return (
@@ -61,11 +71,11 @@ export default function Navbar() {
                 {/* Desktop Nav */}
                 <div className="navbar__links">
                     {navLinks.map((link) => (
-                        <Link // Use Link instead of a tag for consistency
+                        <Link
                             key={link.label}
-                            to={isHome ? link.href : `/${link.href}`}
+                            to={link.href}
                             className="navbar__link"
-                            onClick={(e) => handleNavClick(e, link.href)}
+                            onClick={(e) => handleNavClick(e, link.href, link.type || 'section')}
                             id={`nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
                         >
                             {link.label}
@@ -107,9 +117,9 @@ export default function Navbar() {
                         {navLinks.map((link) => (
                             <Link
                                 key={link.label}
-                                to={isHome ? link.href : `/${link.href}`}
+                                to={link.href}
                                 className="navbar__mobile-link"
-                                onClick={(e) => handleNavClick(e, link.href)}
+                                onClick={(e) => handleNavClick(e, link.href, link.type || 'section')}
                             >
                                 {link.label}
                             </Link>

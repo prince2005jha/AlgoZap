@@ -87,6 +87,41 @@
     justify-content: center;
 }
 
+.hero__btn--glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7);
+    animation: btnPulse 2s infinite;
+}
+
+.hero__btn--glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(249, 115, 22, 0.4);
+}
+
+.hero__btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.hero__btn--glow:hover .hero__btn-icon {
+    transform: scale(1.1) rotate(-10deg);
+}
+
+@keyframes btnPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(249, 115, 22, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0);
+    }
+}
+
 /* Stats Card - White Glass */
 .hero__stats {
     display: flex;

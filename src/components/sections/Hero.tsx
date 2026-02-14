@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Zap, Shield, Blocks, Sparkles } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 export default function Hero() {
@@ -57,11 +58,11 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3 }}
                 >
-                    <a href="#" className="btn-primary hero__btn" id="hero-cta-start">
-                        <Zap size={18} />
+                    <Link to="/builder" className="btn-primary hero__btn hero__btn--glow" id="hero-cta-start">
+                        <Zap size={18} className="hero__btn-icon" />
                         Start Automating
                         <ArrowRight size={18} />
-                    </a>
+                    </Link>
                     <a href="#how-it-works" className="btn-secondary hero__btn" id="hero-cta-learn">
                         See How It Works
                     </a>
