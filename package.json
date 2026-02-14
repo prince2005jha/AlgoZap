@@ -1,16 +1,17 @@
 {
   "name": "algozap",
-  "private": true,
   "version": "1.0.0",
   "description": "AlgoZap - Blockchain Verified Workflow Automation",
+  "private": true,
   "type": "module",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "start": "node index.js",
-    "server": "nodemon index.js",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [
     "automation",
